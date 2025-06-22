@@ -1,61 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
 import '../../../providers/user_provider.dart';
-import '../../../routes/route_names.dart';
+import 'package:provider/provider.dart';
 
 class SettingsDosen extends StatelessWidget {
   const SettingsDosen({super.key});
 
-  void _logout(BuildContext context) async {
-    final userProvider = Provider.of<UserProvider>(context, listen: false);
-    await userProvider.logout(); // hapus data user
-    Navigator.pushNamedAndRemoveUntil(
-      context,
-      RouteNames.loginStepEmail,
-      (route) => false, // hapus semua route sebelumnya
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pengaturan Akun'),
-        backgroundColor: Colors.blueAccent,
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(24),
-        children: [
-          const Text(
-            'Pengaturan',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(height: 24),
+    final userProvider = Provider.of<UserProvider>(context, listen: false);
 
-          // Contoh item pengaturan lain
-          ListTile(
-            leading: const Icon(Icons.lock),
-            title: const Text('Ubah Password'),
-            onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Fitur belum tersedia')),
-              );
-            },
-          ),
-          const Divider(),
-
-          // Tombol Logout
-          ListTile(
-            leading: const Icon(Icons.logout, color: Colors.redAccent),
-            title: const Text(
-              'Logout',
-              style: TextStyle(color: Colors.redAccent),
-            ),
-            onTap: () => _logout(context),
-          ),
-        ],
-      ),
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(20, 32, 20, 100),
+      children: [
+        ListTile(
+          leading: const Icon(Icons.logout),
+          title: const Text('Keluar'),
+          onTap: () async {
+            await userProvider.logout();
+            if (context.mounted) {
+              Navigator.pushReplacementNamed(context, '/loginStepEmail');
+            }
+          },
+        ),
+      ],
     );
   }
 }

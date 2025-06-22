@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ActivityMahasiswa extends StatelessWidget {
-  const ActivityMahasiswa({super.key});
+class DetailBoardPage extends StatelessWidget {
+  const DetailBoardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class ActivityMahasiswa extends StatelessWidget {
       itemBuilder: (context, index) {
         if (index == 0) {
           return const Text(
-            'Aktivitas Terbaru',
+            'Detail Board',
             style: TextStyle(
               color: Colors.white,
               fontSize: 26,
@@ -35,18 +35,18 @@ class ActivityMahasiswa extends StatelessWidget {
             ),
             child: Row(
               children: [
-                const Icon(Icons.history, color: Colors.blue),
+                const Icon(Icons.task_alt, color: Colors.blue),
                 const SizedBox(width: 12),
                 Expanded(
                   child: Text(
-                    'Aktivitas #${index}',
+                    'Tugas ke-${index}',
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
-                const Text('2 jam lalu'),
+                const Text('12 Mar'),
               ],
             ),
           );

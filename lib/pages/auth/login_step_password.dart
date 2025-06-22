@@ -37,10 +37,20 @@ class _LoginStepPasswordState extends State<LoginStepPassword> {
       // Navigasi berdasarkan role
       switch (userProvider.role) {
         case 'mahasiswa':
-          Navigator.pushReplacementNamed(context, RouteNames.mainMahasiswa);
+          Navigator.pushNamedAndRemoveUntil(
+            context,
+            RouteNames.mainMahasiswa,
+            (Route<dynamic> route) => false,
+          );
+
           break;
         case 'dosen':
-          Navigator.pushReplacementNamed(context, RouteNames.mainDosen);
+          Navigator.pushNamedAndRemoveUntil(
+            context,
+            RouteNames.mainDosen,
+            (Route<dynamic> route) => false,
+          );
+
           break;
         default:
           setState(() => _error = 'Peran pengguna tidak dikenali');

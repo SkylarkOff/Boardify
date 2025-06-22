@@ -1,61 +1,127 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
 import '../../../providers/user_provider.dart';
-import '../../../routes/route_names.dart';
+import 'components/opsi.dart';
 
 class SettingsMahasiswa extends StatelessWidget {
   const SettingsMahasiswa({super.key});
 
-  void _logout(BuildContext context) async {
-    final userProvider = Provider.of<UserProvider>(context, listen: false);
-    await userProvider.logout(); // hapus data user
-    Navigator.pushNamedAndRemoveUntil(
-      context,
-      RouteNames.loginStepEmail,
-      (route) => false, // hapus semua route sebelumnya
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Pengaturan Akun'),
-        backgroundColor: Colors.blueAccent,
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(24),
-        children: [
-          const Text(
-            'Pengaturan',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-          ),
-          const SizedBox(height: 24),
+    final userProvider = Provider.of<UserProvider>(context);
 
-          // Contoh item pengaturan lain
-          ListTile(
-            leading: const Icon(Icons.lock),
-            title: const Text('Ubah Password'),
-            onTap: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                const SnackBar(content: Text('Fitur belum tersedia')),
-              );
-            },
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(20, 82, 20, 24),
+      children: [
+        const Text(
+          'Settings',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
           ),
-          const Divider(),
+        ),
+        const SizedBox(height: 100),
 
-          // Tombol Logout
-          ListTile(
-            leading: const Icon(Icons.logout, color: Colors.redAccent),
-            title: const Text(
-              'Logout',
-              style: TextStyle(color: Colors.redAccent),
+        // 🔐 Account button
+        Container(
+          margin: const EdgeInsets.only(bottom: 16),
+          height: 82,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Color(0xFF1E88E5)),
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(
+              children: [
+                const Icon(Icons.person, color: Colors.black),
+                const SizedBox(width: 12),
+                const Expanded(
+                  child: Text(
+                    'Account',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                OpsiPopup(
+                  items: [
+                    [
+                      OpsiItem(value: 'profile', label: 'Profile'),
+                      OpsiItem(value: 'security', label: 'Security'),
+                    ],
+                  ],
+                  onSelected: (value) {
+                    // Aksi saat opsi Account dipilih
+                    if (value == 'profile') {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Profile selected')),
+                      );
+                    } else if (value == 'security') {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Security selected')),
+                      );
+                    }
+                  },
+                ),
+              ],
             ),
-            onTap: () => _logout(context),
           ),
-        ],
-      ),
+        ),
+
+        // 🏢 Organization button
+        Container(
+          height: 82,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            border: Border.all(color: Color(0xFF1E88E5)),
+            borderRadius: BorderRadius.circular(25),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 12),
+            child: Row(
+              children: [
+                const Icon(Icons.apartment_rounded, color: Colors.black),
+                const SizedBox(width: 12),
+                const Expanded(
+                  child: Text(
+                    'Organization',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+                OpsiPopup(
+                  items: [
+                    [
+                      OpsiItem(value: 'general', label: 'General'),
+                      OpsiItem(value: 'members', label: 'Members'),
+                    ],
+                  ],
+                  onSelected: (value) {
+                    // Aksi saat opsi Organization dipilih
+                    if (value == 'general') {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('General selected')),
+                      );
+                    } else if (value == 'members') {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('Members selected')),
+                      );
+                    }
+                  },
+                ),
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

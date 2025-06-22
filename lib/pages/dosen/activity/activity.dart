@@ -5,13 +5,16 @@ class ActivityDosen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(
-          'Aktivitas Dosen',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
-      ),
+    return ListView.builder(
+      padding: const EdgeInsets.fromLTRB(20, 32, 20, 100),
+      itemCount: 6,
+      itemBuilder: (context, index) {
+        return ListTile(
+          leading: const Icon(Icons.history),
+          title: Text('Mahasiswa X mengirim revisi ke-${index + 1}'),
+          subtitle: const Text('20 Juni 2025, 09:00'),
+        );
+      },
     );
   }
 }

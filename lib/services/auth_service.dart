@@ -38,10 +38,7 @@ class AuthService {
     try {
       final response = await _dio.post(
         '/auth/login',
-        data: {
-          'input': email,
-          'password': password,
-        },
+        data: {'input': email, 'password': password},
       );
 
       if (kDebugMode) {
