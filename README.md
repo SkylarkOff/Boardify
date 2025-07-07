@@ -1,38 +1,69 @@
 # 📱 Boardify Mobile
 
-**Boardify Mobile** is a Flutter application for managing **skripsi supervision**, developed to support structured task and revision tracking between students and academic advisors.
+**Boardify Mobile** adalah aplikasi Flutter yang dirancang untuk memfasilitasi **bimbingan skripsi mahasiswa** secara lebih terstruktur dan efisien. Aplikasi ini memungkinkan mahasiswa dan dosen untuk memantau **tugas, progres, deadline, serta status revisi** secara real-time, dengan antarmuka yang modern dan ramah pengguna.
 
-> Developed by **Amril Nadapdap**.
-
----
-
-## ✨ Features
-
-- 📋 Manage tasks and revisions
-- 👨‍🏫 Role-based UI for students and lecturers
-- 🧠 Task prioritization (planned for future)
-- 🔐 Local user session handling
-- 🌐 Integrated with Express.js backend via REST API
+> 🔗 Versi mobile ini merupakan bagian dari ekosistem **Boardify**, yaitu platform bimbingan skripsi yang dikembangkan dalam versi web dan mobile.  
+> 👉 Boardify Web: [https://github.com/Artahacking/Boardify-unimal](https://github.com/Artahacking/Boardify-unimal)  
+> Dikembangkan oleh **Faiz Syukri Arta**
 
 ---
 
-## 🚀 Tech Stack
+## 👨‍💻 Tim Pengembang
 
-- **Flutter** (Dart)
-- **State Management**: [`provider`](https://pub.dev/packages/provider)
-- **HTTP Client**: [`dio`](https://pub.dev/packages/dio)
-- **Local Storage**: [`shared_preferences`](https://pub.dev/packages/shared_preferences)
-- **Environment Config**: [`flutter_dotenv`](https://pub.dev/packages/flutter_dotenv)
-- **SVG Support**: [`flutter_svg`](https://pub.dev/packages/flutter_svg)
-- **Logging**: [`logger`](https://pub.dev/packages/logger)
-- **Icons**: [`lucide_icons`](https://pub.dev/packages/lucide_icons)
+| Peran                      | Nama                          |
+|---------------------------|-------------------------------|
+| Mobile Developer          | **Amril Nadapdap**            |
+| UI/UX Designer (Mobile)   | **Destiara Kurnia Amanda**    |
+| UI/UX Designer (Web)      | **Wirda Syahrifa**            |
+| Web Developer (Boardify)  | **Faiz Syukri Arta**          |
 
 ---
 
-## 📦 Installation
+## ✨ Fitur Utama
 
-### 1. Clone the Repository
+- ✅ Autentikasi pengguna (Dosen & Mahasiswa)
+- ✅ Pembuatan dan pengelolaan **board** & **card**
+- ✅ Monitoring revisi dan deadline skripsi
+- 🚧 Prioritas tugas (dalam pengembangan)
+- ✅ Navigasi terpisah berdasarkan peran pengguna (role-based UI)
+- 🚀 Responsif dan ramah pengguna untuk perangkat mobile
 
-```bash
-git clone https://github.com/SkylarkOff/boardify-mobile.git
-cd boardify-mobile
+---
+
+## 🎨 Desain UI/UX
+
+- **Versi Web**  
+  Dirancang oleh **Wirda Syahrifa** dengan gaya modern dan clean. Fokus pada kemudahan navigasi bagi dosen pembimbing.
+
+- **Versi Mobile**  
+  Dirancang oleh **Destiara Kurnia Amanda** dengan pendekatan mobile-first yang intuitif dan user-friendly bagi mahasiswa.
+
+---
+
+## 📂 Struktur Utama (Mobile)
+
+
+---
+
+## 🚧 Status Pengembangan
+
+Proyek ini masih dalam tahap pengembangan aktif. Fitur-fitur seperti **notifikasi revisi**, **task prioritization**, dan **pencarian tugas** sedang dirancang untuk versi mendatang.
+
+---
+
+## 🏫 Institusi
+
+Proyek ini dikembangkan sebagai bagian dari karya tugas akhir mahasiswa  
+**Program Studi Teknik Informatika – Universitas Malikussaleh**.
+
+---
+
+## 📜 Lisensi
+
+Lisensi akan ditentukan pada rilis akhir.
+
+---
+
+> Dikembangkan oleh **Amril Nadapdap** – 2025
+
+
