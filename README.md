@@ -38,10 +38,6 @@
 - **Versi Mobile**  
   Dirancang oleh **Destiara Kurnia Amanda** dengan pendekatan mobile-first yang intuitif dan user-friendly bagi mahasiswa.
 
----
-
-## 📂 Struktur Utama (Mobile)
-
 
 ---
 
