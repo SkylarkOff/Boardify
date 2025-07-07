@@ -1,10 +1,14 @@
-# 📱 Boardify Mobile
+# 📱 Boardify
 
-**Boardify Mobile** adalah aplikasi Flutter yang dirancang untuk memfasilitasi **bimbingan skripsi mahasiswa** secara lebih terstruktur dan efisien. Aplikasi ini memungkinkan mahasiswa dan dosen untuk memantau **tugas, progres, deadline, serta status revisi** secara real-time, dengan antarmuka yang modern dan ramah pengguna.
+**Boardify** adalah aplikasi Flutter yang dirancang untuk memfasilitasi **bimbingan skripsi mahasiswa** secara lebih terstruktur dan efisien. Aplikasi ini memungkinkan mahasiswa dan dosen untuk memantau **tugas, progres, deadline, serta status revisi** secara real-time, dengan antarmuka yang modern dan ramah pengguna.
 
 > 🔗 Versi mobile ini merupakan bagian dari ekosistem **Boardify**, yaitu platform bimbingan skripsi yang dikembangkan dalam versi web dan mobile.  
 > 👉 Boardify Web: [https://github.com/Artahacking/Boardify-unimal](https://github.com/Artahacking/Boardify-unimal)  
 > Dikembangkan oleh **Faiz Syukri Arta**
+
+> 🔗 Backend untuk versi mobile tersedia di:  
+> 👉 Boardify Express (REST API): [https://github.com/SkylarkOff/Boardify-Express](https://github.com/SkylarkOff/Boardify-Express)  
+> Dibangun menggunakan **Express.js**, **Prisma**, dan **MySQL**
 
 ---
 
