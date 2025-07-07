@@ -12,7 +12,7 @@
 
 | Peran                      | Nama                          |
 |---------------------------|-------------------------------|
-| Mobile Developer          | **Amril Nadapdap**            |
+| Mobile Developer          | **Rifa Amril Sahputa**        |
 | UI/UX Designer (Mobile)   | **Destiara Kurnia Amanda**    |
 | Web Developer             | **Faiz Syukri Arta**          |
 | UI/UX Designer (Web)      | **Wirda Syahrifa**            |
