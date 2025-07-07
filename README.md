@@ -14,8 +14,8 @@
 |---------------------------|-------------------------------|
 | Mobile Developer          | **Amril Nadapdap**            |
 | UI/UX Designer (Mobile)   | **Destiara Kurnia Amanda**    |
+| Web Developer             | **Faiz Syukri Arta**          |
 | UI/UX Designer (Web)      | **Wirda Syahrifa**            |
-| Web Developer (Boardify)  | **Faiz Syukri Arta**          |
 
 ---
 
